@@ -1,11 +1,12 @@
 import os
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 
 @app.route('/')
 def hello_world():  # put application's code here
+    return render_template('index.html')
     return 'Francis Rose Esterado, BSIT 3, ITE 322 - System Integration and Architecture 1, Semi Final Exam!'
 
 
